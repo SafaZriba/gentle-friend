@@ -1,0 +1,3 @@
+.message { margin-bottom:12px; }
+.message.user .content { background:#e6f0ff; padding:8px; border-radius:8px; display:inline-block; }
+.message.assistant .content { background:#fff3e6; padding:8px; border-radius:8px; display:inline-block; }

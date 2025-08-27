@@ -1,0 +1,14 @@
+<p>chat works!</p>
+<div class="chat-container">
+  <div class="messages" style="height:400px; overflow:auto; padding:12px; border:1px solid #e0e0e0; border-radius:8px;">
+    <div *ngFor="let m of messages" class="message" [ngClass]="m.role">
+      <div><strong *ngIf="m.role==='user'">You</strong><strong *ngIf="m.role==='assistant'">Gentle Friend</strong></div>
+      <div class="content">{{ m.content }}</div>
+    </div>
+  </div>
+
+  <form (ngSubmit)="send()" style="display:flex; gap:8px; margin-top:10px;">
+    <input [(ngModel)]="input" name="msg" placeholder="Say something..." style="flex:1; padding:8px; border-radius:6px; border:1px solid #ccc;" />
+    <button type="submit" style="padding:8px 12px; border-radius:6px;">Send</button>
+  </form>
+</div>
